@@ -25,4 +25,6 @@
 
 @property (strong, nonatomic) NSDictionary *dic;
 
+
+- (id) initWithDictionary:(NSDictionary *)dic;
 @end

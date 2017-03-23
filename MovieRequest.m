@@ -41,7 +41,7 @@ static NSString * const authToken = @"3b502b3f-b1ff-4128-bd99-626e74836d9c";
 {
     NSMutableDictionary *parameters = [@{} mutableCopy];
     
-    parameters[@"authToken"] = self.authToken;
+    parameters[@"authToken"] = authToken;
 
     return [parameters copy];
 }
@@ -49,7 +49,7 @@ static NSString * const authToken = @"3b502b3f-b1ff-4128-bd99-626e74836d9c";
 - (NSDictionary *)rankParameters
 {
     NSMutableDictionary *parameters = [@{} mutableCopy];
-    parameters[@"authToken"] = self.authToken;
+    parameters[@"authToken"] = authToken;
     parameters[@"startRankIndex"] =[NSNumber numberWithInteger:self.startRankIndex];
     parameters[@"numMovies"] =[NSNumber numberWithInteger:self.numMovies];
     return [parameters copy];
@@ -58,7 +58,7 @@ static NSString * const authToken = @"3b502b3f-b1ff-4128-bd99-626e74836d9c";
 - (NSDictionary *)movieDetailParameters
 {
     NSMutableDictionary *parameters = [@{} mutableCopy];
-    parameters[@"authToken"] = self.authToken;
+    parameters[@"authToken"] = authToken;
     parameters[@"movieIds"] =[NSNumber numberWithInteger:self.movieIds];
     return [parameters copy];
 }

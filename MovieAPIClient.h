@@ -1,5 +1,5 @@
 //
-//  MoiveAPIClient.h
+//  MovieAPIClient.h
 //  MovieDemo
 //
 //  Created by hongjian lin on 3/23/17.
@@ -8,7 +8,7 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import "APIClient.h"
-@interface MoiveAPIClient : AFHTTPSessionManager<APIClient>
+@interface MovieAPIClient : AFHTTPSessionManager<APIClient>
 
 + (instancetype)sharedClient;
 

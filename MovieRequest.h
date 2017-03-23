@@ -10,7 +10,7 @@
 
 @interface MovieRequest : NSObject
 
-@property (nonatomic, copy) NSString *authToken;
+
 @property (nonatomic, assign) NSInteger startRankIndex;
 @property (nonatomic, assign) NSInteger numMovies;
 @property (nonatomic, assign) NSInteger movieIds;

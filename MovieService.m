@@ -1,24 +1,25 @@
 //
-//  MoiveService.m
+//  MovieService.m
 //  MovieDemo
 //
 //  Created by hongjian lin on 3/23/17.
 //  Copyright © 2017 hongjian lin. All rights reserved.
 //
 
-#import "MoiveService.h"
+#import "MovieService.h"
 #import "MovieRequest.h"
+#import "Movie.h"
 static NSString * const AllMoviesEndpointString = @"api/1/FEE/AllMovies";
 static NSString * const MoviesByRankEndpointString = @"api/1/FEE/MoviesByRank";
 static NSString * const MovieDetailsEndpointString = @"api/1/FEE/MovieDetails";
 
-@interface MoiveService()
+@interface MovieService()
 
 @property (nonatomic, strong) id<APIClient> client;
 
 @end
 
-@implementation MoiveService
+@implementation MovieService
 
 
 - (instancetype)initWithAPIClient:(id<APIClient>)client
@@ -33,8 +34,8 @@ static NSString * const MovieDetailsEndpointString = @"api/1/FEE/MovieDetails";
 }
 
 
-- (void)getMoiveResultsWithRequest:(MovieRequest *)request
-                           success:(MoiveSuccessCallback)success
+- (void)getMovieResultsWithRequest:(MovieRequest *)request
+                           success:(MovieSuccessCallback)success
                            failure:(ServiceFailureCallback)failure
 {
     
@@ -42,27 +43,16 @@ static NSString * const MovieDetailsEndpointString = @"api/1/FEE/MovieDetails";
     
     
     [self.client GET:endpoint parameters:request.parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        if ([responseObject objectForKey:@"result_type"] != [NSNull null]) {
-//            [[TocaBocaAPI shared] setSearchResultType:[responseObject objectForKey:@"result_type"]];
-//        }
-//        id JSONArray = [responseObject objectForKey:@"result"];
-//        
-//        if (JSONArray == [NSNull null]) {
-//            // So, if result isn't set, but we got a response, it's all good?
-//            // Shouldn't the server return an empty array?
-//            return success(@[]);
-//        }
-//        
-//        NSError *error = nil;
-//        NSArray<Video *> *results = [MTLJSONAdapter modelsOfClass:Video.class fromJSONArray:JSONArray error:&error];
-//        
-//        if (error == nil) {
-//            success(results);
-//        }
-//        else {
-//            failure(error);
-//        }
-//        
+      
+        NSArray * JSONArray = (NSArray *) responseObject;
+        NSMutableArray *result= [[NSMutableArray alloc] init];
+        for (NSDictionary *movieDic in JSONArray) {
+            Movie *tem=[[Movie alloc] initWithDictionary:movieDic];
+            [result addObject:tem];
+        }
+        
+        success(result);
+        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
     
@@ -73,8 +63,8 @@ static NSString * const MovieDetailsEndpointString = @"api/1/FEE/MovieDetails";
     
 }
 
-- (void)getMoiveRankResultsWithRequest:(MovieRequest *)request
-                               success:(MoiveSuccessCallback)success
+- (void)getMovieRankResultsWithRequest:(MovieRequest *)request
+                               success:(MovieSuccessCallback)success
                                failure:(ServiceFailureCallback)failure
 {
     NSString *endpoint = MoviesByRankEndpointString;
@@ -89,8 +79,8 @@ static NSString * const MovieDetailsEndpointString = @"api/1/FEE/MovieDetails";
     }];
 }
 
-- (void)getMoiveDetailResultsWithRequest:(MovieRequest *)request
-                                 success:(MoiveSuccessCallback)success
+- (void)getMovieDetailResultsWithRequest:(MovieRequest *)request
+                                 success:(MovieSuccessCallback)success
                                  failure:(ServiceFailureCallback)failure
 {
     NSString *endpoint = MovieDetailsEndpointString;

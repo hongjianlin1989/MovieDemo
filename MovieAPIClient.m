@@ -1,24 +1,24 @@
 //
-//  MoiveAPIClient.m
+//  MovieAPIClient.m
 //  MovieDemo
 //
 //  Created by hongjian lin on 3/23/17.
 //  Copyright © 2017 hongjian lin. All rights reserved.
 //
 
-#import "MoiveAPIClient.h"
+#import "MovieAPIClient.h"
 
 
 static NSString * const MovieServiceURLString = @"https://interview.zocdoc.com/";
 
 
-@implementation MoiveAPIClient
+@implementation MovieAPIClient
 
 + (instancetype)sharedClient {
-    static MoiveAPIClient *_sharedClient = nil;
+    static MovieAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[MoiveAPIClient alloc] initWithBaseURL:[NSURL URLWithString:MovieServiceURLString]];
+        _sharedClient = [[MovieAPIClient alloc] initWithBaseURL:[NSURL URLWithString:MovieServiceURLString]];
     });
     
     return _sharedClient;

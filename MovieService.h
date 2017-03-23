@@ -1,5 +1,5 @@
 //
-//  MoiveService.h
+//  MovieService.h
 //  MovieDemo
 //
 //  Created by hongjian lin on 3/23/17.
@@ -13,9 +13,9 @@
 @class Movie;
 
 
-typedef void (^MoiveSuccessCallback)(NSArray <Movie *> *results);
+typedef void (^MovieSuccessCallback)(NSArray <Movie *> *results);
 
-@interface MoiveService : NSObject
+@interface MovieService : NSObject
 
 typedef enum {
     RetrieveMovieSet = 1,
@@ -26,16 +26,16 @@ typedef enum {
 - (instancetype)initWithAPIClient:(id<APIClient>)client;
 
 
-- (void)getMoiveResultsWithRequest:(MovieRequest *)request
-                           success:(MoiveSuccessCallback)success
+- (void)getMovieResultsWithRequest:(MovieRequest *)request
+                           success:(MovieSuccessCallback)success
                            failure:(ServiceFailureCallback)failure;
 
-- (void)getMoiveRankResultsWithRequest:(MovieRequest *)request
-                                   success:(MoiveSuccessCallback)success
+- (void)getMovieRankResultsWithRequest:(MovieRequest *)request
+                                   success:(MovieSuccessCallback)success
                                    failure:(ServiceFailureCallback)failure;
 
-- (void)getMoiveDetailResultsWithRequest:(MovieRequest *)request
-                                 success:(MoiveSuccessCallback)success
+- (void)getMovieDetailResultsWithRequest:(MovieRequest *)request
+                                 success:(MovieSuccessCallback)success
                                  failure:(ServiceFailureCallback)failure;
 
 @end

@@ -10,4 +10,19 @@
 
 @interface Movie : NSObject
 
+
+@property (copy, nonatomic) NSString* movieId;
+
+@property (copy, nonatomic) NSString* rank;
+
+@property (copy, nonatomic) NSString* name;
+
+@property (copy, nonatomic) NSString* duration;
+
+@property (copy, nonatomic) NSString* movieDescription;
+
+@property (copy, nonatomic) NSString* director;
+
+@property (strong, nonatomic) NSDictionary *dic;
+
 @end

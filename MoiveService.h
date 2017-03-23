@@ -9,9 +9,33 @@
 #import <Foundation/Foundation.h>
 #import "APIClient.h"
 
-@class VideoRequest;
-@class Video;
+@class MovieRequest;
+@class Movie;
+
+
+typedef void (^MoiveSuccessCallback)(NSArray <Movie *> *results);
 
 @interface MoiveService : NSObject
+
+typedef enum {
+    RetrieveMovieSet = 1,
+    RetrieveMovieInfoBasedOnRank,
+    RetrieveDetailedMovieInfo
+} MovieTermType;
+
+- (instancetype)initWithAPIClient:(id<APIClient>)client;
+
+
+- (void)getMoiveResultsWithRequest:(MovieRequest *)request
+                           success:(MoiveSuccessCallback)success
+                           failure:(ServiceFailureCallback)failure;
+
+- (void)getMoiveRankResultsWithRequest:(MovieRequest *)request
+                                   success:(MoiveSuccessCallback)success
+                                   failure:(ServiceFailureCallback)failure;
+
+- (void)getMoiveDetailResultsWithRequest:(MovieRequest *)request
+                                 success:(MoiveSuccessCallback)success
+                                 failure:(ServiceFailureCallback)failure;
 
 @end

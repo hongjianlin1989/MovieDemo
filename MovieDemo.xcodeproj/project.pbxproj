@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A8D594602B6B9D4ADF75FF1 /* libPods-MovieDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F932AA72CD52E97069655D76 /* libPods-MovieDemo.a */; };
+		2742A31D1E86F1CB0099CC09 /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A31C1E86F1CB0099CC09 /* PurchaseViewController.m */; };
 		276E4F631E84130600A67708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F621E84130600A67708 /* main.m */; };
 		276E4F661E84130600A67708 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F651E84130600A67708 /* AppDelegate.m */; };
 		276E4F691E84130600A67708 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F681E84130600A67708 /* ViewController.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2742A31B1E86F1CB0099CC09 /* PurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseViewController.h; sourceTree = "<group>"; };
+		2742A31C1E86F1CB0099CC09 /* PurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseViewController.m; sourceTree = "<group>"; };
 		276E4F5E1E84130600A67708 /* MovieDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276E4F621E84130600A67708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		276E4F641E84130600A67708 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,14 +143,16 @@
 		276E4F601E84130600A67708 /* MovieDemo */ = {
 			isa = PBXGroup;
 			children = (
+				276E4F6A1E84130600A67708 /* Main.storyboard */,
 				276E4F641E84130600A67708 /* AppDelegate.h */,
 				276E4F651E84130600A67708 /* AppDelegate.m */,
+				2742A31B1E86F1CB0099CC09 /* PurchaseViewController.h */,
+				2742A31C1E86F1CB0099CC09 /* PurchaseViewController.m */,
 				276E4F671E84130600A67708 /* ViewController.h */,
 				276E4F681E84130600A67708 /* ViewController.m */,
 				276E4FA61E844EF900A67708 /* MovieCell.h */,
 				276E4FA71E844EF900A67708 /* MovieCell.m */,
 				276E4FA81E844EF900A67708 /* MovieCell.xib */,
-				276E4F6A1E84130600A67708 /* Main.storyboard */,
 				276E4F6D1E84130600A67708 /* Assets.xcassets */,
 				276E4F6F1E84130600A67708 /* LaunchScreen.storyboard */,
 				276E4F721E84130600A67708 /* Info.plist */,
@@ -554,6 +559,7 @@
 				276E4F661E84130600A67708 /* AppDelegate.m in Sources */,
 				276E4F981E841FB400A67708 /* Movie.m in Sources */,
 				276E4F631E84130600A67708 /* main.m in Sources */,
+				2742A31D1E86F1CB0099CC09 /* PurchaseViewController.m in Sources */,
 				276E4FA91E844EF900A67708 /* MovieCell.m in Sources */,
 				276E4FA51E8423F100A67708 /* MovieRequest.m in Sources */,
 			);

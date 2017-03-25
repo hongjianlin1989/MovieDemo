@@ -22,7 +22,7 @@
 
 - (NSString*) movieId
 {
-    return [self.dic objectForKey:@"id"];
+    return [self.dic objectForKey:@"Id"];
 }
 
 - (NSString *)rank

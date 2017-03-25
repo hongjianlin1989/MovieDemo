@@ -13,7 +13,7 @@
 
 @property (nonatomic, assign) NSInteger startRankIndex;
 @property (nonatomic, assign) NSInteger numMovies;
-@property (nonatomic, assign) NSInteger movieIds;
+@property (nonatomic, strong) NSArray* movieIds;
 
 
 /**
@@ -22,7 +22,7 @@
 + (MovieRequest *)requestMovie;
 + (MovieRequest *)requestStartRankIndex:(NSNumber *)startRankIndex
                               numMovies:(NSNumber *)numMovies;
-+ (MovieRequest *)requestmovieIds:(NSNumber *)movieIds;
++ (MovieRequest *)requestmovieIds:(NSArray *)movieIds;
 
 
 /**
@@ -35,5 +35,5 @@
 /**
  * Request part of the URL.
  */
-- (NSString *)url;
+- (NSString *)DetailUrl;
 @end

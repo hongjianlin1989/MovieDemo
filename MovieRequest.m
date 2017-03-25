@@ -20,10 +20,10 @@ static NSString * const authToken = @"3b502b3f-b1ff-4128-bd99-626e74836d9c";
     return request;
 }
 
-+ (MovieRequest *)requestmovieIds:(NSNumber *)movieIds
++ (MovieRequest *)requestmovieIds:(NSArray *)movieIds
 {
     MovieRequest *request = [MovieRequest new];
-    request.movieIds= movieIds.integerValue;
+    request.movieIds= [movieIds copy];
     return request;
 }
 
@@ -59,14 +59,23 @@ static NSString * const authToken = @"3b502b3f-b1ff-4128-bd99-626e74836d9c";
 {
     NSMutableDictionary *parameters = [@{} mutableCopy];
     parameters[@"authToken"] = authToken;
-    parameters[@"movieIds"] =[NSNumber numberWithInteger:self.movieIds];
+    [parameters setObject:self.movieIds forKey:@"movieIds"];
+
     return [parameters copy];
 }
 
 
-- (NSString *)url
+- (NSString *)DetailUrl
 {
-    return @"";
+    NSString *url=[NSString stringWithFormat:@"authToken=%@", authToken];
+    
+    for (NSNumber *num in self.movieIds) {
+        
+        url= [url stringByAppendingString:[NSString stringWithFormat:@"&movieIds=%@",num.stringValue]];
+        
+    }
+    
+    return url;
 }
 
 

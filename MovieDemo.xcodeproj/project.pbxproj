@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0A8D594602B6B9D4ADF75FF1 /* libPods-MovieDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F932AA72CD52E97069655D76 /* libPods-MovieDemo.a */; };
 		2742A31D1E86F1CB0099CC09 /* PurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A31C1E86F1CB0099CC09 /* PurchaseViewController.m */; };
+		2742A3201E8710B20099CC09 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A31F1E8710B20099CC09 /* AsyncImageView.m */; };
+		2742A3231E8710BB0099CC09 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A3221E8710BB0099CC09 /* Movie.m */; };
+		2742A3261E8710CA0099CC09 /* MovieAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A3251E8710CA0099CC09 /* MovieAPIClient.m */; };
+		2742A32A1E8710EB0099CC09 /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A3291E8710EB0099CC09 /* MovieService.m */; };
+		2742A32D1E8710F60099CC09 /* MovieRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A32C1E8710F60099CC09 /* MovieRequest.m */; };
+		2742A3301E8716BA0099CC09 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2742A32F1E8716BA0099CC09 /* DetailViewController.m */; };
 		276E4F631E84130600A67708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F621E84130600A67708 /* main.m */; };
 		276E4F661E84130600A67708 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F651E84130600A67708 /* AppDelegate.m */; };
 		276E4F691E84130600A67708 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F681E84130600A67708 /* ViewController.m */; };
@@ -17,13 +23,8 @@
 		276E4F711E84130600A67708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276E4F6F1E84130600A67708 /* LaunchScreen.storyboard */; };
 		276E4F7C1E84130600A67708 /* MovieDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F7B1E84130600A67708 /* MovieDemoTests.m */; };
 		276E4F871E84130600A67708 /* MovieDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F861E84130600A67708 /* MovieDemoUITests.m */; };
-		276E4F981E841FB400A67708 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F971E841FB400A67708 /* Movie.m */; };
-		276E4F9E1E84215800A67708 /* MovieAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4F9D1E84215800A67708 /* MovieAPIClient.m */; };
-		276E4FA11E8422DE00A67708 /* MovieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4FA01E8422DE00A67708 /* MovieService.m */; };
-		276E4FA51E8423F100A67708 /* MovieRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4FA41E8423F100A67708 /* MovieRequest.m */; };
 		276E4FA91E844EF900A67708 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4FA71E844EF900A67708 /* MovieCell.m */; };
 		276E4FAA1E844EF900A67708 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276E4FA81E844EF900A67708 /* MovieCell.xib */; };
-		276E4FAD1E84593500A67708 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 276E4FAC1E84593500A67708 /* AsyncImageView.m */; };
 		5B1E86C81666A9088FF0171F /* libPods-MovieDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE6BA2968170FE6B8548AD3 /* libPods-MovieDemoTests.a */; };
 		A759E67E74196374778A64B7 /* libPods-MovieDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3DD366DC58F8CB99F4F663D /* libPods-MovieDemoUITests.a */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,19 @@
 /* Begin PBXFileReference section */
 		2742A31B1E86F1CB0099CC09 /* PurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseViewController.h; sourceTree = "<group>"; };
 		2742A31C1E86F1CB0099CC09 /* PurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseViewController.m; sourceTree = "<group>"; };
+		2742A31E1E8710B20099CC09 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = MovieDemo/AsyncImageView.h; sourceTree = "<group>"; };
+		2742A31F1E8710B20099CC09 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = MovieDemo/AsyncImageView.m; sourceTree = "<group>"; };
+		2742A3211E8710BB0099CC09 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = MovieDemo/Movie.h; sourceTree = "<group>"; };
+		2742A3221E8710BB0099CC09 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = MovieDemo/Movie.m; sourceTree = "<group>"; };
+		2742A3241E8710CA0099CC09 /* MovieAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieAPIClient.h; path = MovieDemo/MovieAPIClient.h; sourceTree = "<group>"; };
+		2742A3251E8710CA0099CC09 /* MovieAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieAPIClient.m; path = MovieDemo/MovieAPIClient.m; sourceTree = "<group>"; };
+		2742A3271E8710D60099CC09 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = MovieDemo/APIClient.h; sourceTree = "<group>"; };
+		2742A3281E8710EB0099CC09 /* MovieService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieService.h; path = MovieDemo/MovieService.h; sourceTree = "<group>"; };
+		2742A3291E8710EB0099CC09 /* MovieService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieService.m; path = MovieDemo/MovieService.m; sourceTree = "<group>"; };
+		2742A32B1E8710F60099CC09 /* MovieRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieRequest.h; path = MovieDemo/MovieRequest.h; sourceTree = "<group>"; };
+		2742A32C1E8710F60099CC09 /* MovieRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieRequest.m; path = MovieDemo/MovieRequest.m; sourceTree = "<group>"; };
+		2742A32E1E8716BA0099CC09 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2742A32F1E8716BA0099CC09 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		276E4F5E1E84130600A67708 /* MovieDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276E4F621E84130600A67708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		276E4F641E84130600A67708 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,20 +78,9 @@
 		276E4F821E84130600A67708 /* MovieDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		276E4F861E84130600A67708 /* MovieDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieDemoUITests.m; sourceTree = "<group>"; };
 		276E4F881E84130600A67708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		276E4F961E841FB400A67708 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		276E4F971E841FB400A67708 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
-		276E4F9B1E8420B400A67708 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
-		276E4F9C1E84215800A67708 /* MovieAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieAPIClient.h; sourceTree = "<group>"; };
-		276E4F9D1E84215800A67708 /* MovieAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieAPIClient.m; sourceTree = "<group>"; };
-		276E4F9F1E8422DE00A67708 /* MovieService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieService.h; sourceTree = "<group>"; };
-		276E4FA01E8422DE00A67708 /* MovieService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieService.m; sourceTree = "<group>"; };
-		276E4FA31E8423F100A67708 /* MovieRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieRequest.h; sourceTree = "<group>"; };
-		276E4FA41E8423F100A67708 /* MovieRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieRequest.m; sourceTree = "<group>"; };
 		276E4FA61E844EF900A67708 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		276E4FA71E844EF900A67708 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		276E4FA81E844EF900A67708 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
-		276E4FAB1E84593500A67708 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
-		276E4FAC1E84593500A67708 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		2794F08BD273487F10F1C4BB /* Pods-MovieDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieDemoUITests/Pods-MovieDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3410865BCFD160E3D3CFF94F /* Pods-MovieDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieDemoTests/Pods-MovieDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5ED9A7398D0B936CAAC78CF5 /* Pods-MovieDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieDemo/Pods-MovieDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				276E4F651E84130600A67708 /* AppDelegate.m */,
 				2742A31B1E86F1CB0099CC09 /* PurchaseViewController.h */,
 				2742A31C1E86F1CB0099CC09 /* PurchaseViewController.m */,
+				2742A32E1E8716BA0099CC09 /* DetailViewController.h */,
+				2742A32F1E8716BA0099CC09 /* DetailViewController.m */,
 				276E4F671E84130600A67708 /* ViewController.h */,
 				276E4F681E84130600A67708 /* ViewController.m */,
 				276E4FA61E844EF900A67708 /* MovieCell.h */,
@@ -202,8 +207,8 @@
 		276E4F951E84199800A67708 /* Request Object */ = {
 			isa = PBXGroup;
 			children = (
-				276E4FA31E8423F100A67708 /* MovieRequest.h */,
-				276E4FA41E8423F100A67708 /* MovieRequest.m */,
+				2742A32B1E8710F60099CC09 /* MovieRequest.h */,
+				2742A32C1E8710F60099CC09 /* MovieRequest.m */,
 			);
 			name = "Request Object";
 			sourceTree = "<group>";
@@ -211,8 +216,8 @@
 		276E4F991E84206900A67708 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				276E4F9F1E8422DE00A67708 /* MovieService.h */,
-				276E4FA01E8422DE00A67708 /* MovieService.m */,
+				2742A3281E8710EB0099CC09 /* MovieService.h */,
+				2742A3291E8710EB0099CC09 /* MovieService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -220,9 +225,9 @@
 		276E4F9A1E84209300A67708 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				276E4F9B1E8420B400A67708 /* APIClient.h */,
-				276E4F9C1E84215800A67708 /* MovieAPIClient.h */,
-				276E4F9D1E84215800A67708 /* MovieAPIClient.m */,
+				2742A3241E8710CA0099CC09 /* MovieAPIClient.h */,
+				2742A3251E8710CA0099CC09 /* MovieAPIClient.m */,
+				2742A3271E8710D60099CC09 /* APIClient.h */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -230,8 +235,8 @@
 		276E4FA21E84236900A67708 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				276E4F961E841FB400A67708 /* Movie.h */,
-				276E4F971E841FB400A67708 /* Movie.m */,
+				2742A3211E8710BB0099CC09 /* Movie.h */,
+				2742A3221E8710BB0099CC09 /* Movie.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -239,8 +244,8 @@
 		276E4FAE1E84593800A67708 /* 3rd party */ = {
 			isa = PBXGroup;
 			children = (
-				276E4FAB1E84593500A67708 /* AsyncImageView.h */,
-				276E4FAC1E84593500A67708 /* AsyncImageView.m */,
+				2742A31E1E8710B20099CC09 /* AsyncImageView.h */,
+				2742A31F1E8710B20099CC09 /* AsyncImageView.m */,
 			);
 			name = "3rd party";
 			sourceTree = "<group>";
@@ -552,16 +557,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276E4FA11E8422DE00A67708 /* MovieService.m in Sources */,
-				276E4FAD1E84593500A67708 /* AsyncImageView.m in Sources */,
+				2742A32A1E8710EB0099CC09 /* MovieService.m in Sources */,
+				2742A3201E8710B20099CC09 /* AsyncImageView.m in Sources */,
+				2742A3231E8710BB0099CC09 /* Movie.m in Sources */,
 				276E4F691E84130600A67708 /* ViewController.m in Sources */,
-				276E4F9E1E84215800A67708 /* MovieAPIClient.m in Sources */,
+				2742A3261E8710CA0099CC09 /* MovieAPIClient.m in Sources */,
 				276E4F661E84130600A67708 /* AppDelegate.m in Sources */,
-				276E4F981E841FB400A67708 /* Movie.m in Sources */,
+				2742A32D1E8710F60099CC09 /* MovieRequest.m in Sources */,
+				2742A3301E8716BA0099CC09 /* DetailViewController.m in Sources */,
 				276E4F631E84130600A67708 /* main.m in Sources */,
 				2742A31D1E86F1CB0099CC09 /* PurchaseViewController.m in Sources */,
 				276E4FA91E844EF900A67708 /* MovieCell.m in Sources */,
-				276E4FA51E8423F100A67708 /* MovieRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
